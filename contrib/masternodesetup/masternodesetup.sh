@@ -150,7 +150,17 @@ masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
 
-
+# ADDNODES:
+addnode=seed01.modden.io
+addnode=seed02.modden.io
+addnode=seed03.modden.io
+addnode=seed04.modden.io
+addnode=seed05.modden.io
+addnode=seed06.modden.io
+addnode=seed07.modden.io
+addnode=seed08.modden.io
+addnode=seed09.modden.io
+addnode=seed10.modden.io
 
 
 EOF
