@@ -110,6 +110,9 @@ struct Params {
     int64_t nTargetSpacing;
     int nTimeSlotLength;
 
+    // burn addresses
+    std::map<std::string, int> mBurnAddresses = {};
+    
     // spork keys
     std::string strSporkPubKey;
     std::string strSporkPubKeyOld;
@@ -163,6 +166,15 @@ struct Params {
         );
     }
 
+    
+    bool IsBurnAddress(const std::string strAddress, const int nHeight) 
+    {
+        return 
+            mBurnAddresses.find(strAddress) != mBurnAddresses.end() &&
+            mBurnAddresses[strAddress] < nHeight;
+    }
+    
+    
     /*
      * (Legacy) Zerocoin consensus params
      */
