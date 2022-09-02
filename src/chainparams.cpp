@@ -249,18 +249,13 @@ public:
         pchMessageStart[1] = 0xf1;
         pchMessageStart[2] = 0xe0;
         pchMessageStart[3] = 0xb9;
-        nDefaultPort = 8668;
+        nDefaultPort = 6886;
 
         vSeeds.push_back(CDNSSeedData("seed01", "185.207.104.251"));
         vSeeds.push_back(CDNSSeedData("seed02", "185.194.141.200"));
         vSeeds.push_back(CDNSSeedData("seed03", "5.45.107.126"));
         vSeeds.push_back(CDNSSeedData("seed04", "188.68.42.79"));
-        vSeeds.push_back(CDNSSeedData("seed05", "seed05.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed06", "seed06.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed07", "seed07.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed08", "seed08.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed09", "seed09.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed10", "seed10.modden.io"));
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // M
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 51); // M
@@ -381,7 +376,7 @@ public:
         pchMessageStart[1] = 0x8b;
         pchMessageStart[2] = 0x4c;
         pchMessageStart[3] = 0xd3;
-        nDefaultPort = __PORT_TESTNET__;
+        nDefaultPort = 6889;
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -504,7 +499,7 @@ public:
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0x47;
         pchMessageStart[3] = 0x38;
-        nDefaultPort = __PORT_REGTEST__;
+        nDefaultPort = 6885;
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
