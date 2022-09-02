@@ -128,7 +128,7 @@ public:
 
         // // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
         // /////////////////////////////////////////////////////////////////
-
+/**
          uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -168,13 +168,13 @@ public:
          std::cout << "Genesis Merkle 0x" << genesis.hashMerkleRoot.GetHex() << std::endl;
 
          exit(0);
-
+ */
         // /////////////////////////////////////////////////////////////////
 
         genesis = CreateGenesisBlock(1656793447, 947130, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
 
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   
@@ -268,10 +268,10 @@ public:
         pchMessageStart[3] = 0xb9;
         nDefaultPort = 8668;
 
-        vSeeds.push_back(CDNSSeedData("seed01", "seed01.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed02", "seed02.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed03", "seed03.modden.io"));
-        vSeeds.push_back(CDNSSeedData("seed04", "seed04.modden.io"));
+        vSeeds.push_back(CDNSSeedData("seed01", "185.207.104.251"));
+        vSeeds.push_back(CDNSSeedData("seed02", "185.194.141.200"));
+        vSeeds.push_back(CDNSSeedData("seed03", "5.45.107.126"));
+        vSeeds.push_back(CDNSSeedData("seed04", "188.68.42.79"));
         vSeeds.push_back(CDNSSeedData("seed05", "seed05.modden.io"));
         vSeeds.push_back(CDNSSeedData("seed06", "seed06.modden.io"));
         vSeeds.push_back(CDNSSeedData("seed07", "seed07.modden.io"));
@@ -312,7 +312,7 @@ public:
 
         genesis = CreateGenesisBlock(1656793445, 18745, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000003c75888e7183cab1f252acccf35778af65199bfbbff4700377c21669040"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
         assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
