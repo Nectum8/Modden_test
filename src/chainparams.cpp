@@ -69,25 +69,8 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"))
-    (1, uint256S("0x000005ccfa68087e719a4d63b9bdfee330dfe1554e56f94472a2b775e7e05db2"))
-    (16, uint256S("0x00000ca294331cb5378a0dfd750ed8c14450cc4ada5bb2c286d088f5f93a7a77"))
-    (50, uint256S("0x0000082dabae542c8b0d89b1d2983f858523744c98141d579144dee9a7f3e103"))
-    (101, uint256S("0x000000accccbb82bba04745607679ee9760a12b8a122a90b0219476152eceb99"))
-    (116, uint256S("0x0000030f06b47d740f62503398bbc9f81527cee5b077a90be1be91ec0f50922b"))
-    (200, uint256S("0x0000044a8f22a15898341f1faa0ea7bc5478953dbf86db382fa8c811679fe312"))
-    (500, uint256S("0x0000062c200a9a34a3a165dbdaf3e19c3b7fe565c634b871cbb1980cda69a57a"))
-    (1001, uint256S("0xfed229d2b98541da14d14f845fde4a2b612a2dcb374632e1d2c5642f2dfb69d7"))
-    (1312, uint256S("0x71803a61c73d9265663b8ca9bb8e957557c475459da1b0a41d203b8999edcb08"))
-    (1517, uint256S("0x07716c6e32154f15185e1ba639fabfd857ef04a61e26a0856381f8d67e6b61f0"))
-    (1625, uint256S("0xe1b3194b1429d491d7901a6c6d290d9f535488bf8c0cef05cdc86fd3b9af498b"))
-    (1960, uint256S("0x65383631dc33d313c8612e6ad9287cc1920ef53f1917c41cb1141f16ec76d502"))
-    (10000, uint256S("0x2516190fcc7e83a998f988336cb82a59be6d0126e6661a7ab91c02b9966236dc"))
-    (20000, uint256S("0xcdb79d04b0201e8e47ab0a3230455e8ca8e199d4a3862d7e9e6c8c07ca992e88"))
-    (30000, uint256S("0xad5e9be70ad1a84f33f6e00aa148adfa273c2fef7400d558ebf139cd91fe0250"))
-    (40000, uint256S("0x409e53528fd5dfac0dbe923d61d75144ff6f6239c429e7db69f9d3aef0a5693a"))
-    (50000, uint256S("0xdb3fa3f2eba899784bbb1ad977da9929dce60f113715cbe7f882ef7b8dc1de14"))
-    (56845, uint256S("0xf999b936434fda6c6323ef47469fd64d8c54faf7fbc32fb621ba91d0c253a52b"));
+    (0, uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54") 
+;
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -312,8 +295,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793445, 18745, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
+        assert(consensus.hashGenesisBlock == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
@@ -438,8 +421,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000008beabf48112d3cdeec6fa076f051656ea5be0d5765370fe429bec04d001"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
+        assert(consensus.hashGenesisBlock == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
