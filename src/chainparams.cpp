@@ -69,8 +69,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54") 
-;
+    (0, uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
