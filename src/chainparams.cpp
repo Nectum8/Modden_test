@@ -110,7 +110,7 @@ public:
 
         // // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
         // /////////////////////////////////////////////////////////////////
-
+/**
          uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -150,6 +150,7 @@ public:
          std::cout << "Genesis Merkle 0x" << genesis.hashMerkleRoot.GetHex() << std::endl;
 
          exit(0);
+*/
  
         // /////////////////////////////////////////////////////////////////
 
@@ -181,7 +182,7 @@ public:
 
         // spork keys
         consensus.strSporkPubKey = "04cf024314996ae2097e2999fedb8bd0d4f72f821234d40d4289b254ea4b6125e3087454ad49f237100f20feeb651d215ad3fc09686d2e625d9af12c0a273c458a";
-        consensus.strSporkPubKeyOld = "04cf024314996ae2097e2999fedb8bd0d4f72f821234d40d4289b254ea4b6125e3087454ad49f237100f20feeb651d215ad3fc09686d2e625d9af12c0a273c458a";
+        consensus.strSporkPubKeyOld = "";
         consensus.nTime_EnforceNewSporkKey = 0;
         consensus.nTime_RejectOldSporkKey = 0;
 
@@ -289,8 +290,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793445, 18745, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
@@ -314,7 +315,7 @@ public:
         consensus.nTimeSlotLength = 15;
 
         // spork keys
-        consensus.strSporkPubKey = "03ef91259425a39d0deba6190caebd9326800e6dbc140a41472bb2663d19680fcc";
+        consensus.strSporkPubKey = "04cf024314996ae2097e2999fedb8bd0d4f72f821234d40d4289b254ea4b6125e3087454ad49f237100f20feeb651d215ad3fc09686d2e625d9af12c0a273c458a";
         consensus.strSporkPubKeyOld = "";
         consensus.nTime_EnforceNewSporkKey = 0;
         consensus.nTime_RejectOldSporkKey = 0;
@@ -415,8 +416,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
+        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
@@ -443,7 +444,7 @@ public:
         private key hex: cRsUdhyMYPrwFj2z3PnhkxcgptPm4PSBj6HJivt8iy4Xwe1Li2gi
         Address: TXxFB5kDGfkuEkA16yBRDo7DdKvFoxdcL6
         */
-        consensus.strSporkPubKey = "037e975ecd283b55110b1438a2acaa25a72e38e31990a224d5d19dc7b4e436c1e8";
+        consensus.strSporkPubKey = "04cf024314996ae2097e2999fedb8bd0d4f72f821234d40d4289b254ea4b6125e3087454ad49f237100f20feeb651d215ad3fc09686d2e625d9af12c0a273c458a";
         consensus.strSporkPubKeyOld = "";
         consensus.nTime_EnforceNewSporkKey = 0;
         consensus.nTime_RejectOldSporkKey = 0;
