@@ -416,8 +416,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ef20371800a04939c0eea309ba510c69c2114496de3796215ddf6d30a54"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf6013c5cd370397fbdc06890e4afbc4614a651b432f7d7b6dfb4f8afd15ed5e2"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000007ad749801fbd453f63814b415a849b7eb8e2b9b1763bb0b07b71ed3c8d6"));
+        assert(genesis.hashMerkleRoot == uint256S("0x2f520abc86d94e3164f37ff922aaeba4ff07c192e37a82e472cd10fa119cc2b4"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
