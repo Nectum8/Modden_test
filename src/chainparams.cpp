@@ -110,7 +110,7 @@ public:
 
         // // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
         // /////////////////////////////////////////////////////////////////
-
+/**
          uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -150,7 +150,7 @@ public:
          std::cout << "Genesis Merkle 0x" << genesis.hashMerkleRoot.GetHex() << std::endl;
 
          exit(0);
-
+ */
  
         // /////////////////////////////////////////////////////////////////
 
@@ -416,8 +416,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        assert(consensus.hashGenesisBlock == uint256S("0x000003e5bc171b3998a5359a55c82ef98398a5c516a90468a16c65393ee94085"));
+        assert(genesis.hashMerkleRoot == uint256S("0xb784a7367ebb222db28e90d22ea6812325171e092a3ffa4ed78cebe952e4d9b3"));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
