@@ -110,7 +110,7 @@ public:
 
         // // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
         // /////////////////////////////////////////////////////////////////
-/**
+
          uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -150,7 +150,7 @@ public:
          std::cout << "Genesis Merkle 0x" << genesis.hashMerkleRoot.GetHex() << std::endl;
 
          exit(0);
- */
+
  
         // /////////////////////////////////////////////////////////////////
 
