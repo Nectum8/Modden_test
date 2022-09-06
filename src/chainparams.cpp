@@ -110,7 +110,7 @@ public:
 
         // // This is used inorder to mine the genesis block. Once found, we can use the nonce and block hash found to create a valid genesis block
         // /////////////////////////////////////////////////////////////////
-/**
+
          uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -156,8 +156,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793447, 947130, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000003e5bc171b3998a5359a55c82ef98398a5c516a90468a16c65393ee94085"));
-        assert(genesis.hashMerkleRoot == uint256S("0xb784a7367ebb222db28e90d22ea6812325171e092a3ffa4ed78cebe952e4d9b3"));
+        assert(consensus.hashGenesisBlock == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   
@@ -290,8 +290,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793445, 18745, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        // assert(consensus.hashGenesisBlock == uint256S("0x000007ad749801fbd453f63814b415a849b7eb8e2b9b1763bb0b07b71ed3c8d6"));
-        // assert(genesis.hashMerkleRoot == uint256S("0x2f520abc86d94e3164f37ff922aaeba4ff07c192e37a82e472cd10fa119cc2b4"));
+        assert(consensus.hashGenesisBlock == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
@@ -416,8 +416,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        // assert(consensus.hashGenesisBlock == uint256S("0x000003e5bc171b3998a5359a55c82ef98398a5c516a90468a16c65393ee94085"));
-        // assert(genesis.hashMerkleRoot == uint256S("0xb784a7367ebb222db28e90d22ea6812325171e092a3ffa4ed78cebe952e4d9b3"));
+        assert(consensus.hashGenesisBlock == uint256S(""));
+        assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
