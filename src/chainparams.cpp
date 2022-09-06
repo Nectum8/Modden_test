@@ -52,7 +52,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Modden August 2023";
+    const char* pszTimestamp = "Modden September 2022";
     const CScript genesisOutputScript = CScript() << ParseHex("04e209a299d9b1483b42c1e827975054b276188cb1b86943ebf9673a955b4bfb466d6ef5167539deac570ebb9df4eb5b256a9dd2a5a9bd44399e16d9bf6fae46c2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
