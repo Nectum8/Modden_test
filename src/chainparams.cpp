@@ -247,6 +247,7 @@ public:
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
 
+/**
  uint32_t nGenesisTime = 1656793447;
          arith_uint256 test;
          bool fNegative;
@@ -286,12 +287,12 @@ public:
          std::cout << "Genesis Merkle 0x" << genesis.hashMerkleRoot.GetHex() << std::endl;
 
          exit(0);
-
+ */
 
         genesis = CreateGenesisBlock(1656793445, 18745, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+       //  assert(consensus.hashGenesisBlock == uint256S(""));
+        // assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
@@ -416,8 +417,8 @@ public:
 
         genesis = CreateGenesisBlock(1656793446, 582448, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S(""));
-        assert(genesis.hashMerkleRoot == uint256S(""));
+        // assert(consensus.hashGenesisBlock == uint256S(""));
+       // assert(genesis.hashMerkleRoot == uint256S(""));
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.powLimit   = ~UINT256_ZERO >> 20;   // modden starting difficulty is 1 / 2^12
